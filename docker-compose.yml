@@ -1,0 +1,44 @@
+# =============================================================================
+# Create+ Minecraft Server - Docker Compose
+# MC 1.21.1 | NeoForge 21.1.228 | Create+ 6.0.0 Early Alpha D
+# Compatible con Dokploy - instancia SEPARADA del servidor principal
+# =============================================================================
+# Puertos (distintos al servidor principal para no chocar si corren en el mismo host):
+#   25566 → Minecraft
+#   24455 → Simple Voice Chat (UDP)
+# =============================================================================
+
+services:
+  minecraft:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: minecraft-create-plus
+    restart: unless-stopped
+    ports:
+      - "25566:25565/tcp"
+      - "24455:24454/udp"
+    environment:
+      - MAX_MEMORY=${MAX_MEMORY:-4G}
+      - MIN_MEMORY=${MIN_MEMORY:-2G}
+    volumes:
+      - mc-create-world:/server/world
+      - mc-create-config:/server/config
+    stdin_open: true
+    tty: true
+
+  playit:
+    image: ghcr.io/playit-cloud/playit-agent:latest
+    container_name: playit-agent-create
+    restart: unless-stopped
+    network_mode: "service:minecraft"
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+    depends_on:
+      - minecraft
+
+volumes:
+  mc-create-world:
+    driver: local
+  mc-create-config:
+    driver: local
