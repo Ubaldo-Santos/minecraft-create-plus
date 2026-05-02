@@ -435,6 +435,8 @@ RUN \
         "https://cdn.modrinth.com/data/Bh6ZOMvp/versions/WO7QFUFi/smarterfarmers-1.19.2-1.7.1.jar" && \
     curl -sSL -o "mods/randomshulkercolours-1.19.2-3.2.jar" \
         "https://cdn.modrinth.com/data/mT4tJQIo/versions/ginoQfnO/randomshulkercolours-1.19.2-3.2.jar" && \
+    curl -sSL -o "mods/creeper_firework-1.19.2-1.2.0.jar" \
+        "https://cdn.modrinth.com/data/owUiXPam/versions/jrq6JT6B/creeper_firework-1.19.2-1.2.0.jar" && \
     curl -sSL -o "mods/Pehkui-3.8.2+1.19.2-forge.jar" \
         "https://cdn.modrinth.com/data/t5W7Jfwy/versions/pJSHElpS/Pehkui-3.8.2%2B1.19.2-forge.jar" && \
     curl -sSL -o "mods/createframed-1.19.2-1.4.5.1.jar" \
