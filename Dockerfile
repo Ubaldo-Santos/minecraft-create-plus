@@ -446,7 +446,13 @@ RUN \
     curl -sSL -o "mods/YungsApi-1.19.2-Forge-3.8.10.jar" \
         "https://cdn.modrinth.com/data/Ua7DFN59/versions/L5GqhLVE/YungsApi-1.19.2-Forge-3.8.10.jar" && \
     curl -sSL -o "mods/comforts-forge-6.0.7+1.19.2.jar" \
-        "https://cdn.modrinth.com/data/SaCpeal4/versions/4xI610Ck/comforts-forge-6.0.7%2B1.19.2.jar"
+        "https://cdn.modrinth.com/data/SaCpeal4/versions/4xI610Ck/comforts-forge-6.0.7%2B1.19.2.jar" && \
+    curl -sSL -o "mods/Chunky-1.3.38.jar" \
+        "https://cdn.modrinth.com/data/fALzjamp/versions/WNen5Iom/Chunky-1.3.38.jar" && \
+    curl -sSL -o "mods/AI-Improvements-1.19.2-0.5.2.jar" \
+        "https://cdn.modrinth.com/data/DSVgwcji/versions/tSHaOkjT/AI-Improvements-1.19.2-0.5.2.jar" && \
+    curl -sSL -o "mods/smoothboot-reloaded-mc1.19.2-0.0.4.jar" \
+        "https://cdn.modrinth.com/data/z53V2L4P/versions/FzbfQajL/smoothboot%28reloaded%29-mc1.19.2-0.0.4.jar"
 
 # =============================================================================
 # Runtime stage
